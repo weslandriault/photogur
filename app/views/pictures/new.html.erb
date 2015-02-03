@@ -2,7 +2,7 @@
 
 <%= link_to "Back to Pictures", pictures_url %>
 <%= form_for @picture do |f| %>
-	<p>
+<!-- 	<p>
 		<%= label_tag :artist %><br>
 		<%= text_field_tag :artist %>
 	</p>
@@ -15,6 +15,25 @@
 	<p>
 		<%= label_tag :url %><br>
 		<%= text_field_tag :url %>
+	</p>
+
+	<p>
+		<%= submit_tag "Save" %>
+	</p>  -->
+
+	<p>
+		<%= f.label :artist %><br>
+		<%= f.text_field :artist %>
+	</p>
+
+	<p>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :url %><br>
+		<%= f.text_field :url %>
 	</p>
 
 	<p>
