@@ -9,6 +9,7 @@ class PicturesController < ApplicationController
 	end
 
 	def new
+		@picture = Picture.new
 	end
 
 	def create
