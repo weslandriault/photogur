@@ -1,5 +1,7 @@
 <h1>Pictures</h1>
 
+<h3><%= link_to "Add a New Picture", "pictures/new"  %></h3>
+
 <% @pictures.each do |picture| %>
 	<div class="Picture <%= picture.id %>" style="margin-top: 50px;">
 		<p><%= picture.title %>, <%= picture.artist %></p>
