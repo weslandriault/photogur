@@ -1,1 +1,11 @@
 <h1>Pictures</h1>
+
+<% @pictures.each do |picture| %>
+	<div class="Picture <%= picture.id %>" style="margin-top: 50px;">
+		<p><%= picture.title %>, <%= picture.artist %></p>
+		<h3 style="margin: 0;"><%= picture.description %></h3>
+		<img src="<%= picture.url %>" alt="<%= picture.description %>">
+		<p><%= link_to "View Pic", picture_path(picture) %></p>
+	</div>
+
+<% end %>
