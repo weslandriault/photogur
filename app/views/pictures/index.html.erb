@@ -1,7 +1,10 @@
 <h1>Pictures</h1>
 <%= link_to "New Picture", "/pictures/new" %>
 
-<% @pictures.each do |picture| %>
+<% @most_recent_pictures.each do |picture| %>
 <p><%= picture.title %>, <%= picture.artist %></p>
 <img src="<%= picture.url %>">
 <% end %>
+
+<h2>Pictures more than One Month Old</h2>
+<h3><%= Picture.created_before(1.month.ago)%></h3>
