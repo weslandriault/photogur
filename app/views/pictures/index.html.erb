@@ -7,4 +7,7 @@
 <% end %>
 
 <h2>Pictures more than One Month Old</h2>
-<h3><%= Picture.created_before(1.month.ago)%></h3>
+<h3>There are <%= Picture.created_before(1.month.ago).count %> pictures created more than a month ago:</h3>
+<% @pictures_older_than_1month.each do |picture| %>
+	<img src="<%= picture.url %>">
+<% end %>
